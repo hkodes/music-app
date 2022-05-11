@@ -1,7 +1,7 @@
 List<Map<String, dynamic>> musician = [
-  {'name': 'Rihana', 'img': 'Assets/rihana.png'},
-  {'name': 'Post Malone', 'img': 'Assets/malone.png'},
-  {'name': 'Ariana Grande', 'img': 'Assets/ariana.png'},
+  {'name': 'Rihana', 'img': 'Assets/t1.png'},
+  {'name': 'Post Malone', 'img': 'Assets/t2.png'},
+  {'name': 'Ariana Grande', 'img': 'Assets/t3.png'},
 ];
 
 List<Map<String, dynamic>> playlist = [

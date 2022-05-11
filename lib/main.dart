@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:musicui/playlist_details.dart';
 import 'package:musicui/signin.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: SignIn(),
+      home: const PlaylistDetails(),
     );
   }
 }
