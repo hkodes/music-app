@@ -15,21 +15,21 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.fitHeight, image: AssetImage('Assets/back.png'))),
         child: ListView(
           children: [
-            SizedBox(
+          const  SizedBox(
               height: 10,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding:const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
                   Column(
-                    children: [
-                      Text(
+                    children:const [
+                     Text(
                         'Good Evening,',
                         style: TextStyle(color: Colors.grey, fontSize: 18),
                       ),
@@ -45,18 +45,18 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
-                  Spacer(),
+                const Spacer(),
                   IconButton(
                       onPressed: () {},
-                      icon: Icon(
+                      icon:const Icon(
                         Icons.notifications,
                         color: Colors.white,
                       )),
                   Container(
-                    margin: EdgeInsets.only(left: 10),
+                    margin:const EdgeInsets.only(left: 10),
                     height: 40,
                     width: 40,
-                    decoration: BoxDecoration(
+                    decoration:const BoxDecoration(
                         shape: BoxShape.circle,
                         color: Colors.white,
                         image: DecorationImage(
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+          const  SizedBox(
               height: 50,
             ),
             SizedBox(
@@ -78,18 +78,18 @@ class _HomePageState extends State<HomePage> {
                   itemCount: 8,
                   itemBuilder: (context, index) {
                     return Padding(
-                        padding: EdgeInsets.only(left: 20),
+                        padding:const EdgeInsets.only(left: 20),
                         child:
-                            Image(image: AssetImage('Assets/p${index}.png')));
+                            Image(image: AssetImage('Assets/p$index.png')));
                   }),
             ),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding:const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
-                children: [
+                children:const [
                   Text(
                     'Trending Musicians',
                     style: TextStyle(
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+          const  SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -125,25 +125,25 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                            padding: EdgeInsets.only(left: 20),
+                            padding:const EdgeInsets.only(left: 20),
                             child: Image(
                                 height: 120,
                                 image: AssetImage(musician[index]["img"]))),
-                        SizedBox(
+                       const SizedBox(
                           height: 10,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 20),
+                          padding: const EdgeInsets.only(left: 20),
                           child: Text(
                             musician[index]['name'],
-                            style: TextStyle(
+                            style:const TextStyle(
                               fontSize: 17,
                               fontFamily: 'SFUIDisplay',
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                        Padding(
+                      const  Padding(
                           padding: EdgeInsets.only(left: 20, top: 5),
                           child: Text(
                             'ARTIST',
@@ -160,9 +160,9 @@ class _HomePageState extends State<HomePage> {
                   }),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding:const  EdgeInsets.symmetric(horizontal: 20),
               child: Row(
-                children: [
+                children:const [
                   Text(
                     'Special Playlist',
                     style: TextStyle(
@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
+           const SizedBox(
               height: 20,
             ),
             SizedBox(
@@ -194,48 +194,53 @@ class _HomePageState extends State<HomePage> {
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Padding(
-                            padding: EdgeInsets.only(left: 20),
-                            child: Image(
-                                height: 120,
-                                image: AssetImage(playlist[index]["img"]))),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 20),
-                          child: Text(
-                            playlist[index]['name'],
-                            style: TextStyle(
-                              fontSize: 17,
-                              fontFamily: 'SFUIDisplay',
-                              fontWeight: FontWeight.bold,
+                    return GestureDetector(
+                      onTap: (){
+                        //TODO:Nvigation
+                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                              padding:const EdgeInsets.only(left: 20),
+                              child: Image(
+                                  height: 120,
+                                  image: AssetImage(playlist[index]["img"]))),
+                        const  SizedBox(
+                            height: 10,
+                          ),
+                          Padding(
+                            padding:const  EdgeInsets.only(left: 20),
+                            child: Text(
+                              playlist[index]['name'],
+                              style:const TextStyle(
+                                fontSize: 17,
+                                fontFamily: 'SFUIDisplay',
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(left: 20, top: 5),
-                          child: Text(
-                            playlist[index]['sub'],
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 13,
-                              fontFamily: 'SFUIDisplay',
-                              fontWeight: FontWeight.bold,
+                          Padding(
+                            padding:const  EdgeInsets.only(left: 20, top: 5),
+                            child: Text(
+                              playlist[index]['sub'],
+                              style:const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 13,
+                                fontFamily: 'SFUIDisplay',
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     );
                   }),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding:const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
-                children: [
+                children:const [
                   Text(
                     'Last Playing',
                     style: TextStyle(
@@ -268,31 +273,31 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                            padding: EdgeInsets.only(left: 20, top: 20),
+                            padding:const EdgeInsets.only(left: 20, top: 20),
                             child: Image(
                                 height: 80,
                                 image: AssetImage(playing[index]["img"]))),
-                        SizedBox(
+                       const SizedBox(
                           height: 10,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 20),
+                          padding:const EdgeInsets.only(left: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 playing[index]['name'],
-                                style: TextStyle(
+                                style:const TextStyle(
                                   fontSize: 17,
                                   fontFamily: 'SFUIDisplay',
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 20, top: 5),
+                                padding:const  EdgeInsets.only(left: 20, top: 5),
                                 child: Text(
                                   playing[index]['sub'],
-                                  style: TextStyle(
+                                  style:const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 13,
                                     fontFamily: 'SFUIDisplay',

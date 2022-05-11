@@ -1,7 +1,8 @@
 //// Use this Page to set up Tab Bar and show all the screens according to the Design.
 
-import 'package:flutter/material.dart';
-
+/*import 'package:flutter/material.dart';
+import 'home.dart';
+import 'signin.dart';
 class Root extends StatefulWidget {
   const Root({Key? key}) : super(key: key);
 
@@ -21,25 +22,25 @@ class _RootState extends State<Root> {
     {
       "icon": Icons.search_outlined,
       "active_icon": Icons.search,
-      "page": ExplorePage(),
+      "page": HomePage(),//ExplorePage(),
       "title": ""
     },
     {
       "icon": Icons.bookmark,
       "active_icon": Icons.bookmark,
-      "page": Saved(),
+      "page": HomePage(),//Saved(),
       "title": ""
     },
     {
       "icon": Icons.forum_outlined,
       "active_icon": Icons.forum_rounded,
-      "page": Messages(),
+      "page": HomePage(),//Messages(),
       "title": ""
     },
     {
       "icon": Icons.settings_outlined,
       "active_icon": Icons.settings_rounded,
-      "page": Settings(),
+      "page": HomePage(),//Settings(),
       "title": ""
     },
   ];
@@ -47,7 +48,7 @@ class _RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: cardColor,
+      backgroundColor:Colors.blue,// cardColor,
       body: getBarPage(),
       // bottomNavigationBar: getBottomBar1()
       bottomNavigationBar: getBottomBar(),
@@ -79,7 +80,7 @@ class _RootState extends State<Root> {
           // ),
           boxShadow: [
             BoxShadow(
-                color: shadowColor.withOpacity(0.1),
+                color: Colors.black,//shadowColor.withOpacity(0.1),
                 blurRadius: 1,
                 spreadRadius: 1,
                 offset: Offset(0, 1))
@@ -107,4 +108,4 @@ class _RootState extends State<Root> {
       ),
     );
   }
-}
+}*/ 
